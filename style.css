@@ -2,7 +2,7 @@
  * @author Wahyudi Siswanto
  * @email wahyudisiswanto64@gmail.com
  * @create date 07-13-2023 16:22:23
- * @modify date 07-13-2023 16:22:25
+ * @modify date 07-13-2023 17:35:01
  * @desc [description]
  */
 @font-face {
@@ -23,7 +23,13 @@ body {
 }
 
 #about {
-  background-color: #78c1f3;
+  background-color: #9be8d9b3;
+}
+#contact {
+  background-color: #9be8d9b3;
+}
+footer {
+  background-color: #9be8d9c2;
 }
 
 .nav {

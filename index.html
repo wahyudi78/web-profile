@@ -2,7 +2,7 @@
 @author Wahyudi Siswanto
 @email wahyudisiswanto64@gmail.com
 @create date 07-13-2023 16:21:10
-@modify date 07-13-2023 16:22:13
+@modify date 07-13-2023 17:36:20
 @desc [description]
 -->
 
@@ -14,6 +14,7 @@
     <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="lib/dist/aos.css" />
   </head>
   <body>
     <!-- nav -->
@@ -55,19 +56,19 @@
         </div>
       </div>
       <div class="container-fluid pt-5">
-        <div class="row text-center justify-content-md-centerr pe-5">
+        <div class="row text-center justify-content-md-centerr">
           <div class="col-md lead pt-5">
             <h1 class="display-4 pt-5">Hi, I'am Wahyudi</h1>
             <p>I'am a Programer</p>
             <a class="btn btn-lg btn-success" href="#contact">Contact Me</a>
           </div>
-          <div class="col-md-4 p-5 d-flex justify-content-center">
-            <div class="card me-5 shadow-lg rounded new">
+          <div class="col-md-4 p-5">
+            <div class="card me-5 shadow-lg rounded new" data-aos-delay="50" data-aos="fade-up" data-aos-duration="1000">
               <div class="text-center">
                 <img class="card-img-top" src="assets/project-1.png" alt="project1" />
               </div>
               <div class="container">
-                <h2>Project 1</h2>
+                <h3>Project 1</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eum nisi modi perspiciatis! Tenetur deserunt eum delectus unde in mollitia hic facilis dicta dolorum ducimus nobis obcaecati, placeat nisi vitae?</p>
               </div>
             </div>
@@ -77,7 +78,7 @@
 
       <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#78C1F3"
+          fill="#9be8d9b3"
           fill-opacity="1"
           d="M0,128L48,149.3C96,171,192,213,288,224C384,235,480,213,576,197.3C672,181,768,171,864,181.3C960,192,1056,224,1152,240C1248,256,1344,256,1392,256L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -88,12 +89,12 @@
     <!-- about -->
     <section id="about">
       <div class="container pb-5 pt-5">
-        <h1 class="text-center pt-5 text-white">About Me</h1>
+        <h1 class="text-center pt-5 text-white" data-aos="fade-up" data-aos-delay="40" data-aos-duration="1000">About Me</h1>
         <div class="row pt-5 text-center">
           <div class="col">
             <div class="row">
               <div class="col-md d-flex justify-content-start">
-                <div class="card p-5 shadow-lg text-start">
+                <div class="card p-5 shadow-lg text-start" data-aos-delay="50" data-aos-duration="1000" data-aos="fade-right">
                   <h4>About Me</h4>
                   <p>Hi, My name is Wahyudi Siswanto, S.Kom, I live in Ngawi, I work as an IT in a hospital in Magetan. I want to be a full stack developer</p>
                   <hr />
@@ -139,7 +140,7 @@
                 </div>
               </div>
               <div class="col-md d-flex justify-content-start">
-                <div class="card p-3 rounded-shadow">
+                <div class="card p-3 rounded-shadow" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
                   <h4>programming language</h4>
                   <p>Here are the programming languages ​​that I have learned</p>
                   <div class="row">
@@ -202,10 +203,10 @@
     <!-- project -->
     <section id="project">
       <div class="container pb-5">
-        <h1 class="text-center p-5">My-Project</h1>
+        <h1 class="text-center p-5" data-aos-delay="80" data-aos="fade-up" data-aos-duration="1200">My-Project</h1>
         <div class="row justify-content-center">
           <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3" data-aos-delay="120" data-aos="fade-up" data-aos-duration="1200">
               <div class="text-center">
                 <img class="card-img-top" src="assets/project-1.png" alt="project1" />
               </div>
@@ -216,7 +217,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3" data-aos-delay="150" data-aos="fade-up" data-aos-duration="1200">
               <div class="text-center">
                 <img class="card-img-top" src="assets/project-1.png" alt="project1" />
               </div>
@@ -227,7 +228,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3" data-aos-delay="200" data-aos="fade-up" data-aos-duration="1200">
               <div class="text-center">
                 <img class="card-img-top" src="assets/project-1.png" alt="project1" />
               </div>
@@ -237,47 +238,56 @@
               </div>
             </div>
           </div>
-          <p><a class="nav-link pt-3" href="#">Show More ...</a></p>
+          <p><a class="nav-link pt-3" href="#" data-aos-delay="250" data-aos="fade-down" data-aos-duration="1200">Show More ...</a></p>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#9be8d9b3"
+          fill-opacity="1"
+          d="M0,224L48,202.7C96,181,192,139,288,144C384,149,480,203,576,213.3C672,224,768,192,864,176C960,160,1056,160,1152,170.7C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </section>
     <!-- end project -->
 
     <!-- contact me -->
     <section id="contact">
-      <h1 class="text-center mt-5 mb-5">Contact Me</h1>
-      <div class="container mb-5">
-        <form class="form-inline">
-          <div class="row">
-            <div class="col-md">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                <label for="floatingInput">Name</label>
+      <h1 class="text-center mb-5" data-aos-delay="120" data-aos="fade-up" data-aos-duration="1200">Contact Me</h1>
+      <div class="container">
+        <div class="card p-3 shadow-lg rounded" data-aos-delay="180" data-aos="fade-up" data-aos-duration="1200">
+          <form class="form-inline">
+            <div class="row">
+              <div class="col-md">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Name</label>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Email address</label>
+                </div>
               </div>
             </div>
-            <div class="col-md">
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                <label for="floatingInput">Email address</label>
+            <div class="row">
+              <div class="col-md">
+                <div class="form-floating mb-3">
+                  <input type="textarea" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Message</label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md">
-              <div class="form-floating mb-3">
-                <input type="textarea" class="form-control" id="floatingInput" placeholder="name@example.com" />
-                <label for="floatingInput">Message</label>
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary mb-2">send</button>
-        </form>
+            <button type="submit" class="btn btn-primary">send</button>
+          </form>
+        </div>
       </div>
     </section>
     <!-- end contact -->
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light text-muted">
+    <footer class="text-center text-lg-start text-muted">
       <section>
         <div class="container">
           <div class="row pt-5 pb-5">
@@ -332,5 +342,9 @@
     <!-- Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="lib/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

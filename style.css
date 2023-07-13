@@ -1,6 +1,13 @@
+/**
+ * @author Wahyudi Siswanto
+ * @email wahyudisiswanto64@gmail.com
+ * @create date 07-13-2023 16:22:23
+ * @modify date 07-13-2023 16:22:25
+ * @desc [description]
+ */
 @font-face {
   font-family: Jost-Bold;
-  src: url(Jost-Bold.ttf);
+  src: url(assets/font/Jost-Bold.ttf);
 }
 
 body {

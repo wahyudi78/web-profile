@@ -12,7 +12,8 @@
 <body>
     <!-- navbar -->
     <!-- navbar -->
-    <nav class="bg-blur-xl shadow-lg bg-white bg-opacity-50  fixed top-0 w-full z-50 filter backdrop-filter backdrop-blur-3xl ">
+    <nav
+        class="bg-blur-xl shadow-lg bg-white bg-opacity-50  fixed top-0 w-full z-50 filter backdrop-filter backdrop-blur-3xl ">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
             <a href="#" class="text-gray-500 text-2xl font-bold ">WS</a>
             <div x-data="{ isOpen: false }" class="relative">
@@ -33,7 +34,7 @@
                                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                             </svg>
                             Home
-                    </a></li>
+                        </a></li>
                     <li><a href="#"
                             class="flex items-center block w-full text-gray-700  text-sm shadow-lg bg-white rounded-lg px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
                             <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,7 +42,7 @@
                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                             About
-                    </a></li>
+                        </a></li>
                     <li><a href="#"
                             class="flex items-center block w-full text-gray-700  text-sm shadow-lg bg-white rounded-lg px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
                             <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +50,7 @@
                                     d="M9 12h6M9 9h6m-6 3h6M9 15h3" />
                             </svg>
                             Project
-                    </a></li>
+                        </a></li>
                     <li><a href="#"
                             class="flex items-center block w-full text-gray-700  text-sm shadow-lg bg-white rounded-lg px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
                             <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,8 +58,8 @@
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 5a2 2 0 00-2.22 0L3 8z" />
                             </svg>
                             Contact
-                    </a></li>
-                   
+                        </a></li>
+
                 </ul>
                 <!-- end humberger menu -->
             </div>
@@ -68,24 +69,32 @@
 
     <!-- jumbotron -->
     <div class="bg-white bg-opacity-50 w-full h-screen flex items-center relative" style="z-index: 10;">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center" data-aos="fade-up" data-aos-duration="1000">
-                <div class="w-full md:w-1/2">
+        <div class="container ">
+            <div class="flex items-center space-x-2" >
+                <div class="w-full md:w-1/2 md:pr-10">
                     <h1 class="text-6xl text-gray-700 font-bold">Hi, I'm Wahyudi</h1>
                     <p class="text-2xl text-gray-600">I'm a web developer</p>
                 </div>
-                <div class="w-full md:w-1/2 flex lg:h-screen  items-center justify-center ">
-                    <div class=" rounded-lg bg-gray-100 shadow-lg relative flex right-0 lg:top-0 lg:bottom-0 w-80 h-72 bg-opacity-50 shadow-lg p-4 filter backdrop-filter backdrop-blur-3xl" data-aos="fade-left" data-aos-duration="1000">
-                       
-                        </div>
+                <div class="w-full md:w-1/2 flex lg:h-screen flex items-center justify-center ">
+                    <div class="rounded-lg bg-gray-100 shadow-2xl p-10 flex right-0 lg:top-0 lg:bottom-0 h-2xl w-80 p-4 bg-opacity-30 filter backdrop-filter backdrop-blur-3xl"
+                        >
+                        <p class="text-3xl font-bold tracking-wide text-gray-800">
+                            "Perfection is achieved, not when there is nothing more to add, but when there is nothing
+                            left to take away."
+                        </p>
+                        <hr />
+                        <p class="text-lg text-gray-600">- Antoine de Saint-Exupery</p>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="w-60 h-60 bg-red-500 animate-pulse flex absolute inset-10 top-40 left-40  rounded-full filter blur-2xl  z-0 fixed" style="z-index: 5;"></div>
-    <div class="flex w-80 h-72 bg-gradient-to-r from-red-700 to-blue-700 absolute top-0 right-0 mr-10 rounded-full filter blur-3xl z-0 fixed" style="z-index: 5;"></div>
-   
+    <div class="w-60 h-60 bg-red-300 flex absolute inset-10 top-40 left-40  rounded-full filter blur-2xl  z-0 fixed"
+        style="z-index: 5;"></div>
+    <div class="flex w-80 h-80  bg-gradient-to-r from-red-700 to-blue-700 absolute top-10 right-20 mb-24 rounded-full filter blur-3xl z-0 fixed"
+        style="z-index: 5;"></div>
+
     <!-- <div class="absolute inset-0 h-full w-full bg-gray-800 bg-opacity-50 filter blur-md rounded-full z-0" style="z-index: 0;"></div> -->
     <!-- end jumbotron -->
 
@@ -99,13 +108,19 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <p class="text-lg text-gray-700 mb-4">
-                        Hi, I'm Wahyudi Siswanto. I'm a passionate web developer with experience in creating dynamic and user-friendly web applications. I have a strong background in HTML, CSS, JavaScript, PHP, and various frameworks like Laravel and Vue.js.
+                        Hi, I'm Wahyudi Siswanto. I'm a passionate web developer with experience in creating dynamic and
+                        user-friendly web applications. I have a strong background in HTML, CSS, JavaScript, PHP, and
+                        various frameworks like Laravel and Vue.js.
                     </p>
                     <p class="text-lg text-gray-700 mb-4">
-                        I am constantly learning and expanding my skills to stay updated with the latest web development trends. My goal is to deliver high-quality web solutions that meet the needs of my clients and provide an exceptional user experience.
+                        I am constantly learning and expanding my skills to stay updated with the latest web development
+                        trends. My goal is to deliver high-quality web solutions that meet the needs of my clients and
+                        provide an exceptional user experience.
                     </p>
                     <p class="text-lg text-gray-700">
-                        In my free time, I enjoy exploring new technologies, working on personal projects, and contributing to open-source communities. Feel free to reach out if you have any exciting projects or collaboration opportunities in mind!
+                        In my free time, I enjoy exploring new technologies, working on personal projects, and
+                        contributing to open-source communities. Feel free to reach out if you have any exciting
+                        projects or collaboration opportunities in mind!
                     </p>
                 </div>
             </div>
@@ -115,3 +130,20 @@
 </body>
 
 </html>
+
+
+<!-- thanks to 
+ 
+<a href="https://iconscout.com/3d-illustrations/react" class="text-underline font-size-sm" target="_blank">React</a> by <a href="https://iconscout.com/contributors/tomsdesign" class="text-underline font-size-sm" target="_blank">Toms Design</a>
+
+<a href="https://iconscout.com/3d-illustrations/javascript" class="text-underline font-size-sm" target="_blank">JavaScript</a> by <a href="https://iconscout.com/contributors/tomsdesign" class="text-underline font-size-sm">Toms Design</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a>
+
+<a href="https://iconscout.com/3d-illustrations/php" class="text-underline font-size-sm" target="_blank">php</a> by <a href="https://iconscout.com/contributors/tomsdesign" class="text-underline font-size-sm" target="_blank">Toms Design</a>
+
+<a href="https://iconscout.com/3d-illustrations/mysql" class="text-underline font-size-sm" target="_blank">MySQL</a> by <a href="https://iconscout.com/contributors/tomsdesign" class="text-underline font-size-sm" target="_blank">Toms Design</a>
+
+<a href="https://iconscout.com/3d-illustrations/bootstrap-framework-logo" class="text-underline font-size-sm" target="_blank">Bootstrap Framework</a> by <a href="https://iconscout.com/contributors/fahrulsaputra7" class="text-underline font-size-sm" target="_blank">Fahrul Saputra</a>
+
+<a href="https://iconscout.com/3d-illustrations/laravel-framework-logo" class="text-underline font-size-sm" target="_blank">Laravel Framework</a> by <a href="https://iconscout.com/contributors/fahrulsaputra7" class="text-underline font-size-sm">Fahrul Saputra</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a>
+
+-->

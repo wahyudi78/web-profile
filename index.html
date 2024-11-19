@@ -7,126 +7,204 @@
     <title>Document</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <!-- navbar -->
-    <!-- navbar -->
-    <nav
-        class="bg-blur-xl shadow-lg bg-white bg-opacity-50  fixed top-0 w-full z-50 filter backdrop-filter backdrop-blur-3xl ">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-            <a href="#" class="text-gray-500 text-2xl font-bold ">WS</a>
-            <div x-data="{ isOpen: false }" class="relative">
-                <button @click="isOpen = !isOpen" class="text-white text-xl focus:outline-none md:hidden">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+    <header class="absolute inset-x-0 top-0 z-50">
+        <nav
+            class="bg-blur-xl shadow-lg text-white bg-opacity-50  fixed top-0 w-full z-50 filter backdrop-filter backdrop-blur-3xl items-center justify-between px-10 ">
+            <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+                <a href="#" class="text-gray-500 text-2xl font-bold ">WS</a>
+                <div x-data="{ isOpen: false }" class="relative">
+                    <button @click="isOpen = !isOpen" class="text-white text-xl focus:outline-none md:hidden">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
 
-                <!-- humberger menu -->
-                <ul :class="{'block': isOpen, 'hidden': !isOpen}"
-                    class="absolute md:static right-0 mt-2 md:mt-0 w-48 md:w-auto bg-gray-800 md:bg-transparent py-2 md:py-0 rounded-md md:rounded-none shadow-lg md:shadow-none md:flex md:space-x-6">
-                    <li><a href="#"
-                            class="flex items-center block w-full text-gray-700  text-sm shadow-lg bg-white rounded-lg px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
-                            <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                            </svg>
-                            Home
-                        </a></li>
-                    <li><a href="#"
-                            class="flex items-center block w-full text-gray-700  text-sm shadow-lg bg-white rounded-lg px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
-                            <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            About
-                        </a></li>
-                    <li><a href="#"
-                            class="flex items-center block w-full text-gray-700  text-sm shadow-lg bg-white rounded-lg px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
-                            <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12h6M9 9h6m-6 3h6M9 15h3" />
-                            </svg>
-                            Project
-                        </a></li>
-                    <li><a href="#"
-                            class="flex items-center block w-full text-gray-700  text-sm shadow-lg bg-white rounded-lg px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
-                            <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 5a2 2 0 00-2.22 0L3 8z" />
-                            </svg>
-                            Contact
-                        </a></li>
+                    <!-- humberger menu -->
+                    <ul :class="{'block': isOpen, 'hidden': !isOpen}"
+                        class="absolute md:static right-0 mt-2 md:mt-0 w-48 md:w-auto bg-gray-800 md:bg-transparent py-2 md:py-0 rounded-md md:rounded-none  md:shadow-none md:flex md:space-x-6 items-center">
+                        <li><a href="#"
+                                class="flex text-white items-center block w-full text-gray-700  text-sm px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
 
-                </ul>
-                <!-- end humberger menu -->
+                                Home
+                            </a></li>
+                        <li><a href="#"
+                                class="flex text-white items-center block w-full text-gray-700  text-sm px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
+
+                                About
+                            </a></li>
+                        <li><a href="#"
+                                class="flex text-white items-center block w-full text-gray-700  text-sm px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
+
+                                Project
+                            </a></li>
+                        <li><a href="#"
+                                class="flex text-white items-center block w-full text-gray-700  text-sm px-4 py-2 hover:bg-gray-600 md:hover:bg-transparent">
+
+                                Contact
+                            </a></li>
+                        <li>
+                            <label class="grid cursor-pointer place-items-center">
+                                <input type="checkbox" value="synthwave"
+                                    class="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
+                                <svg class="stroke-base-100 fill-base-100 col-start-1 row-start-1"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5" />
+                                    <path
+                                        d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                                </svg>
+                                <svg class="stroke-base-100 fill-base-100 col-start-2 row-start-1"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </label>
+                        </li>
+
+                    </ul>
+                    <!-- end humberger menu -->
+                </div>
             </div>
-        </div>
-    </nav>
-    <!-- end navbar -->
-
-    <!-- jumbotron -->
-    <div class="bg-white bg-opacity-50 w-full h-screen flex items-center relative" style="z-index: 10;">
-        <div class="container ">
-            <div class="flex items-center space-x-2" >
-                <div class="w-full md:w-1/2 md:pr-10">
-                    <h1 class="text-6xl text-gray-700 font-bold">Hi, I'm Wahyudi</h1>
-                    <p class="text-2xl text-gray-600">I'm a web developer</p>
-                </div>
-                <div class="w-full md:w-1/2 flex lg:h-screen flex items-center justify-center ">
-                    <div class="rounded-lg bg-gray-100 shadow-2xl p-10 flex right-0 lg:top-0 lg:bottom-0 h-2xl w-80 p-4 bg-opacity-30 filter backdrop-filter backdrop-blur-3xl"
-                        >
-                        <p class="text-3xl font-bold tracking-wide text-gray-800">
-                            "Perfection is achieved, not when there is nothing more to add, but when there is nothing
-                            left to take away."
-                        </p>
-                        <hr />
-                        <p class="text-lg text-gray-600">- Antoine de Saint-Exupery</p>
-
-                    </div>
-                </div>
+        </nav>
+    </header>
+    <!-- navbar -->
+    <!-- Hero section -->
+    <div class="hero bg-base-200 min-h-screen">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h4>Hello there</h4>
+                <h1 class="text-5xl font-bold">I'm Wahyudi Siswanto</h1>
+                <p class="py-6">
+                    I'm a simple guy who loves coding and problem solving. I live in Ngawi and work as an IT specialist
+                    in a hospital in Magetan. I'm passionate about web development and always looking for ways to
+                    improve my skills.
+                </p>
+                <button class="btn btn-primary">Get Started</button>
             </div>
         </div>
     </div>
-    <div class="w-60 h-60 bg-red-300 flex absolute inset-10 top-40 left-40  rounded-full filter blur-2xl  z-0 fixed"
-        style="z-index: 5;"></div>
-    <div class="flex w-80 h-80  bg-gradient-to-r from-red-700 to-blue-700 absolute top-10 right-20 mb-24 rounded-full filter blur-3xl z-0 fixed"
-        style="z-index: 5;"></div>
+    <div class="w-full bg-base-200:bg-gray-600">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" ><path fill="#191e24" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,229.3C384,224,480,160,576,160C672,160,768,224,864,250.7C960,277,1056,267,1152,224C1248,181,1344,107,1392,69.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    </div>
+    <!-- End Hero section -->
+<main class="container mx-auto px-6 py-16">
 
-    <!-- <div class="absolute inset-0 h-full w-full bg-gray-800 bg-opacity-50 filter blur-md rounded-full z-0" style="z-index: 0;"></div> -->
-    <!-- end jumbotron -->
 
-    <!-- About Page -->
-    <section id="about" class="bg-gray-100 py-10">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-center mb-6">About Me</h1>
-            <div class="flex items-center justify-center">
-                <div class="w-full md:w-1/2">
-                    <img src="https://picsum.photos/400/300" alt="Profile Picture" class="rounded-full mx-auto mb-6">
+    <!-- about -->
+    <section class="text-center mb-16">
+        <h1 class="text-5xl font-bold mb-4">
+            About Me
+        </h1>
+        <p class="text-xl text-gray-600">
+            Get to know more about me and my journey.
+        </p>
+    </section>
+    <section class="mb-16 text-center">
+        <div class="flex justify-center mb-8">
+            <img alt="Portrait of myself" class="w-48 h-48 object-cover rounded-full shadow-lg border-2 border-white rounded-full" height="192"
+                src="assets/img/profile.png"
+                 />
+        </div>
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4">
+                My Story
+            </h2>
+            <p class="text-gray-600 mb-4">
+                I'm a humble and enthusiastic individual with a passion for coding and problem-solving. I'm always
+                looking for ways to improve my skills and take on new challenges.
+            </p>
+            <p class="text-gray-600">
+                I'm a team player who values collaboration and open communication. I'm friendly, approachable, and
+                always willing to lend a helping hand.
+            </p>
+        </div>
+       
+    </section>
+    <section class="mb-16">
+        <h2 class="text-4xl font-bold text-center mb-8">
+            Skills
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center justify-center">
+                <div class="flex items-center justify-center">
+                    <svg   xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
                 </div>
-                <div class="w-full md:w-1/2">
-                    <p class="text-lg text-gray-700 mb-4">
-                        Hi, I'm Wahyudi Siswanto. I'm a passionate web developer with experience in creating dynamic and
-                        user-friendly web applications. I have a strong background in HTML, CSS, JavaScript, PHP, and
-                        various frameworks like Laravel and Vue.js.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-4">
-                        I am constantly learning and expanding my skills to stay updated with the latest web development
-                        trends. My goal is to deliver high-quality web solutions that meet the needs of my clients and
-                        provide an exceptional user experience.
-                    </p>
-                    <p class="text-lg text-gray-700">
-                        In my free time, I enjoy exploring new technologies, working on personal projects, and
-                        contributing to open-source communities. Feel free to reach out if you have any exciting
-                        projects or collaboration opportunities in mind!
-                    </p>
-                </div>
+                <h3 class="text-2xl font-bold mb-2">
+                    Web Development
+                </h3>
+                <p class="text-gray-600">
+                    Proficient in HTML, CSS, JavaScript, and modern frameworks like React and Vue.js.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fas fa-database text-5xl text-green-500 mb-4">
+                </i>
+                <h3 class="text-2xl font-bold mb-2">
+                    Database Management
+                </h3>
+                <p class="text-gray-600">
+                    Experienced with SQL and NoSQL databases, ensuring data integrity and performance.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fas fa-mobile-alt text-5xl text-purple-500 mb-4">
+                </i>
+                <h3 class="text-2xl font-bold mb-2">
+                    Mobile Development
+                </h3>
+                <p class="text-gray-600">
+                    Skilled in developing responsive and user-friendly mobile applications for iOS and Android.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fas fa-cloud text-5xl text-yellow-500 mb-4">
+                </i>
+                <h3 class="text-2xl font-bold mb-2">
+                    Cloud Computing
+                </h3>
+                <p class="text-gray-600">
+                    Knowledgeable in cloud services like AWS, Azure, and Google Cloud for scalable solutions.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fas fa-lock text-5xl text-red-500 mb-4">
+                </i>
+                <h3 class="text-2xl font-bold mb-2">
+                    Cybersecurity
+                </h3>
+                <p class="text-gray-600">
+                    Committed to implementing robust security measures to protect data and systems.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fas fa-project-diagram text-5xl text-indigo-500 mb-4">
+                </i>
+                <h3 class="text-2xl font-bold mb-2">
+                    Project Management
+                </h3>
+                <p class="text-gray-600">
+                    Experienced in leading projects from conception to completion, ensuring timely delivery.
+                </p>
             </div>
         </div>
     </section>
-    <!-- End About Page -->
+
+    <!-- end about -->
+</main>
+
+
+
 </body>
 
 </html>
